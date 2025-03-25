@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Proprietăți JDBC încărcate direct -->
+    <util:properties id="jdbcProps1">
+        <prop key="tasks.jdbc.url">jdbc:sqlite:RepairShopDB.db</prop>
+    </util:properties>
+
+    <!-- Proprietăți încărcate din fișierul bd.config de pe classpath -->
+    <util:properties id="jdbcProps" location="classpath:bd.config"/>
+
+    <!-- Repositorii pe bază de fișier -->
+    <bean id="requestsRepoFile" class="start.repository.file.ComputerRepairRequestFileRepository">
+        <constructor-arg value="ComputerRequests.txt"/>
+    </bean>
+
+    <bean id="formsRepoFile" class="start.repository.file.ComputerRepairedFormFileRepository">
+        <constructor-arg value="RepairedForms.txt"/>
+        <constructor-arg ref="requestsRepoFile"/>
+    </bean>
+
+    <!-- Repositorii pe bază de JDBC -->
+    <bean id="requestsRepoJdbc" class="start.repository.jdbc.ComputerRepairRequestJdbcRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="formsRepoJdbc" class="start.repository.jdbc.ComputerRepairedFormJdbcRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <!-- Serviciul principal -->
+    <bean id="shopService" class="start.services.ComputerRepairServices">
+        <constructor-arg ref="requestsRepoFile"/>
+        <constructor-arg ref="formsRepoFile"/>
+    </bean>
+
+</beans>
