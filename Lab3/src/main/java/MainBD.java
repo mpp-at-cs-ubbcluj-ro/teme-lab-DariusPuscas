@@ -4,8 +4,6 @@ import java.util.Properties;
 
 public class MainBD {
     public static void main(String[] args) {
-
-
          Properties props=new Properties();
         try {
             props.load(new FileReader("bd.config"));
@@ -18,7 +16,7 @@ public class MainBD {
         System.out.println("Toate masinile din db");
         for(Car car:carRepo.findAll())
             System.out.println(car);
-        String manufacturer="Tesla";
+        String manufacturer="Dacia";
         System.out.println("Masinile produse de "+manufacturer);
         for(Car car:carRepo.findByManufacturer(manufacturer))
             System.out.println(car);

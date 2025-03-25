@@ -114,3 +114,27 @@
 11 Mar 2025 16:09:57,770 INFO  JdbcUtils 29 getNewConnection - user: null
 11 Mar 2025 16:09:57,770 INFO  JdbcUtils 30 getNewConnection - pass: null
 11 Mar 2025 16:09:57,770 TRACE JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7098b907)
+11 Mar 2025 16:35:39,029 INFO  CarsDBRepository 14 <init> - Initializing CarsDBRepository with properties: {jdbc.url=jdbc:sqlite:/proiecte_java/datab/cars.db} 
+11 Mar 2025 16:35:39,047 TRACE CarsDBRepository 22 add - Enter Saving car: Id=0 Tesla Model S 2019
+11 Mar 2025 16:35:39,047 TRACE JdbcUtils 46 getConnection - Enter
+11 Mar 2025 16:35:39,047 TRACE JdbcUtils 23 getNewConnection - Enter
+11 Mar 2025 16:35:39,047 INFO  JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:sqlite:/proiecte_java/datab/cars.db
+11 Mar 2025 16:35:39,047 INFO  JdbcUtils 29 getNewConnection - user: null
+11 Mar 2025 16:35:39,047 INFO  JdbcUtils 30 getNewConnection - pass: null
+11 Mar 2025 16:35:39,378 TRACE JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5a7fe64f)
+11 Mar 2025 16:35:39,396 INFO  CarsDBRepository 35 add - Saved car: Id=6 Tesla Model S 2019
+11 Mar 2025 16:35:39,396 TRACE CarsDBRepository 39 add - Exit
+11 Mar 2025 16:35:39,396 TRACE CarsDBRepository 97 findAll - Enter
+11 Mar 2025 16:35:39,397 TRACE JdbcUtils 46 getConnection - Enter
+11 Mar 2025 16:35:39,397 TRACE JdbcUtils 23 getNewConnection - Enter
+11 Mar 2025 16:35:39,397 INFO  JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:sqlite:/proiecte_java/datab/cars.db
+11 Mar 2025 16:35:39,397 INFO  JdbcUtils 29 getNewConnection - user: null
+11 Mar 2025 16:35:39,397 INFO  JdbcUtils 30 getNewConnection - pass: null
+11 Mar 2025 16:35:39,401 TRACE JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@78452606)
+11 Mar 2025 16:35:39,402 TRACE CarsDBRepository 115 findAll - Exit with([Id=1 Dacia Sandero 2019, Id=2 Skoda Octavia 2020, Id=3 Tesla Model S 2019, Id=4 Tesla Model S 2019, Id=5 Tesla Model S 2019, Id=6 Tesla Model S 2019])
+11 Mar 2025 16:35:39,404 TRACE JdbcUtils 46 getConnection - Enter
+11 Mar 2025 16:35:39,404 TRACE JdbcUtils 23 getNewConnection - Enter
+11 Mar 2025 16:35:39,404 INFO  JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:sqlite:/proiecte_java/datab/cars.db
+11 Mar 2025 16:35:39,404 INFO  JdbcUtils 29 getNewConnection - user: null
+11 Mar 2025 16:35:39,406 INFO  JdbcUtils 30 getNewConnection - pass: null
+11 Mar 2025 16:35:39,406 TRACE JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7098b907)

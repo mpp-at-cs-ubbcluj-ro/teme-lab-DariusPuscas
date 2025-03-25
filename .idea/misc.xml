@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Lab3" />
     <file type="web" url="file://$PROJECT_DIR$/StartGradle" />
+    <file type="web" url="file://$PROJECT_DIR$/TemaLab4" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
